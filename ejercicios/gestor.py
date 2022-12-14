@@ -10,7 +10,7 @@ class Personaje:
         self.alcance = alcance
 
     def __str__(self):
-        return f"{self.nombre}: {self.vida} de vida, {self.ataque} de ataque, {self.defensa} de defensa, {self.alcance} de alcance"
+        return f"{self.nombre}: {self.vida} de vida, {self.ataque} de ataque, {self.defensa} de defensa y {self.alcance} de alcance."
 
 
 class Gestor:
@@ -31,12 +31,12 @@ class Gestor:
             if pTemp.nombre == nombre:
                 self.personajes.remove(pTemp)
                 self.guardar()
-                print("\nPersonaje {} borrado".format(nombre))
+                print(f"\nPersonaje {nombre} borrado.")
                 return
         
     def mostrar(self):
         if len(self.personajes) == 0:
-            print("El gestor está vacío")
+            print("El gestor está vacío.")
             return
         for p in self.personajes:
             print(p)
@@ -47,11 +47,11 @@ class Gestor:
         try:
             self.personajes = pickle.load(fichero)
         except:
-            # print("El fichero está vacío")
+            #fichero vacio
             pass
         finally:
             fichero.close()
-            print("Se han cargado {} personajes".format( len(self.personajes) ))
+            print(f"Se han cargado {len(self.personajes)} personajes.")
     
     def guardar(self):
         fichero = open('personajes.pckl', 'wb')
