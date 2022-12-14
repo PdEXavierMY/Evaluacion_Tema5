@@ -9,4 +9,16 @@ def crear_contadortxt():
         contenido = "0"
         contadortxt.write(contenido)
     contadortxt.close()
-    
+    try:
+        contador = int(contenido)
+        if len(sys.argv) == 2:
+            if sys.argv[1] == "inc":
+                contador += 1
+            elif sys.argv[1] == "dec":
+                contador -= 1
+        print(contador)
+        contadortxt = open("contador.txt", "w")
+        contadortxt.write(str(contador))
+        contadortxt.close()
+    except:
+        print("Error: Fichero corrupto.")
