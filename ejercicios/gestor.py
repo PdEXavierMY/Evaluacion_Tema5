@@ -11,3 +11,17 @@ class Personaje:
 
     def __str__(self):
         return f"{self.nombre}: {self.vida} de vida, {self.ataque} de ataque, {self.defensa} de defensa, {self.alcance} de alcance"
+
+
+class Gestor:
+
+    personajes = []
+    def __init__(self):
+        self.cargar()
+        
+    def agregar(self, p):
+        for pTemp in self.personajes:
+            if pTemp.nombre == p.nombre:
+                return
+        self.personajes.append(p)
+        self.guardar()
