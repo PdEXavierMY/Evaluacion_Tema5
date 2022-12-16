@@ -22,3 +22,6 @@ def crear_contadortxt():
         contadortxt.close()
     except:
         print("Error: Fichero corrupto.")
+
+if __name__ == "__main__":
+    crear_contadortxt()

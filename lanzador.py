@@ -18,9 +18,9 @@ def launcher():
         if modifica_contador:
             numero = solicitar_introducir_numero_extremo("¿Quieres incrementarlo o reducirlo? (Incrementarlo=1, Reducirlo=2)", 1, 2)
             if numero == 1:
-                os.system("")
+                os.system("python3 ejercicios/contador.py inc")
             elif numero == 2:
-                os.system("")
+                os.system("python3 ejercicios/contador.py dec")
     elif numero == 4:
         ges = Gestor()
         print("Añadimos personajes:\n")
