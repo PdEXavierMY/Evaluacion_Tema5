@@ -3,7 +3,7 @@ Módulo que agrupa todas las funcionalidades
 que permiten solicitar introducir un dato cuya respuesta es VERDADERO/SÍ o FALSO/NO
 """
 
-SI = ("s", "sí", "si", "y", "yes", "1")
+SI = ("s", "sí", "si", "y", "yes", "1", "Sí", "Si", "S", "Y", "Yes")
 VERDADERO = ("v", "verdadero", "t", "true", "1")
 
 
